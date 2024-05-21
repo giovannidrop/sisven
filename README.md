@@ -1,65 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Sistema de Gestión de Productos con Laravel y Vue.js
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto implementa un sistema de gestión de productos básico utilizando Laravel para el backend y Vue.js para el frontend.
 
-## About Laravel
+Características
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Categorías:
+Crear, leer, actualizar y eliminar categorías de productos.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Productos:
+Crear, leer, actualizar y eliminar productos.
+Asignar productos a categorías.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Modos de Pago:
+Crear, leer, actualizar y eliminar modos de pago.
 
-## Learning Laravel
+Clientes:
+Crear, leer, actualizar y eliminar clientes.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Instalación
+Backend (Laravel)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Clonar el repositorio: git clone https://github.com/giovannidrop/sisven.git
+Instalar las dependencias: composer install
+Copiar el archivo .env.example a .env y configurar las variables de entorno, especialmente las credenciales de la base de datos.
+Generar una clave de aplicación: php artisan key:generate
+Ejecutar las migraciones para crear las tablas de la base de datos: php artisan migrate
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Frontend (Vue.js)
+Navegar al directorio del frontend: cd frontend
+Instalar las dependencias: npm install
 
-## Laravel Sponsors
+Ejecución
+Backend
+Iniciar el servidor de desarrollo de Laravel: php artisan serve
+El backend estará disponible en http://localhost:8000
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Frontend
+Iniciar el servidor de desarrollo de Vue.js: npm run serve
+El frontend estará disponible en http://localhost:8080
 
-### Premium Partners
+Estructura del Proyecto
+Backend (Laravel)
+app/Models: Modelos Eloquent para cada entidad (Category, Product, PayMode, Customer).
+app/Http/Controllers/API: Controladores API para manejar las solicitudes CRUD.
+database/migrations: Archivos de migración para crear las tablas de la base de datos.
+routes/api.php: Definición de las rutas de la API.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Frontend (Vue.js)
+src/components: Componentes Vue.js para cada funcionalidad CRUD.
+src/router/index.js: Configuración de las rutas de Vue Router.
 
-## Contributing
+Uso
+Acceder al frontend en http://localhost:8080.
+Utilizar los componentes para gestionar las categorías, productos, modos de pago y clientes.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Tecnologías Utilizadas
+Laravel: Framework PHP para el desarrollo del backend.
+Vue.js: Framework JavaScript para el desarrollo del frontend.
+Axios: Librería para realizar solicitudes HTTP desde el frontend.
+Vue Router: Librería para gestionar las rutas del frontend.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contribuciones
+Las contribuciones son bienvenidas. Por favor, crea un fork del repositorio y envía un pull request con tus cambios.
 
 ## License
 
